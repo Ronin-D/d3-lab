@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>D3 Smiley Face</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="script.js" defer></script>
+        <style>
+            .constrols {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10vh;
+                margin: 0;
+                background-color: #ff00aa;
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="controls" class="constrols">
+            <label for="duration">Длительность (ms): </label>
+            <input
+                type="number"
+                id="duration"
+                value="1000"
+                min="1000"
+                max="10000"
+            />
+            <br />
+            <label for="rotation">Поворот (degrees): </label>
+            <input type="number" id="rotation" value="0" min="-360" max="360" />
+            <br />
+            <button type="button" id="start">Start Animation</button>
+            <button type="button" id="clear">Clear SVG</button>
+        </form>
+        <div class="container">
+            <svg></svg>
+        </div>
+    </body>
+</html>
